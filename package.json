@@ -6,7 +6,7 @@
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",
     "browser-sync": "2.26.x",
-    "eslint": "4.16.0",
+    "eslint": "6.8.0",
     "eslint-config-htmlacademy": "0.4.x",
     "gulp": "4.0.x",
     "gulp-cheerio": "^1.0.0",
