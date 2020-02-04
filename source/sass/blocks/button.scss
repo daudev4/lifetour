@@ -1,0 +1,14 @@
+.button {
+  @include button-reset;
+  display: inline-block;
+
+  color: $text-color_secondary;
+  text-transform: uppercase;
+  text-align: center;
+
+  box-sizing: border-box;
+  background: none;
+  cursor: pointer;
+
+  @include transition;
+}

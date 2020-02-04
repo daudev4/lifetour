@@ -1,0 +1,46 @@
+// colors
+$black: #000000;
+
+$white: #ffffff;
+
+$blue: #0266C1;
+$blue_light: #9AC2E6;
+$blue_dark: #2D383F;
+
+$gray_dark: #494949;
+
+// color pallete
+$background-color_primary: $white;
+$background-color_secondary: $blue_dark;
+$background-color_accent: $blue;
+
+$text-color_primary: $blue_dark;
+$text-color_secondary: $white;
+$text-color_accent: $blue;
+
+// fonts
+$font-family_primary: "Montserrat", "Arial", sans-serif;
+
+$font-size_xxxl: 35px;
+$font-size_xxl: 25px;
+$font-size_xl: 21px;
+$font-size_l: 19px;
+$font-size_m: 16px;
+$font-size_s: 14px;
+$font-size_xs: 12px;
+
+$line-height_xxxl: 43px;
+$line-height_xxl: 30px;
+$line-height_xl: 26px;
+$line-height_l: 25px;
+$line-height_m: 24px;
+$line-height_s: 20px;
+$line-height_xs: 15px;
+
+// breakpoints
+$max-width_mobile: 767px;
+$max-width_tablet: 1023px;
+
+// retina
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
