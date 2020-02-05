@@ -1,6 +1,8 @@
 .banner {
   position: relative;
 
+  display: flex;
+
   @include font($font-family_primary, $font-size_l, 400, 148.6%);
   color: $text-color_secondary;
 
@@ -40,8 +42,18 @@
 .banner__inner {
   @include container_desktop;
 
+  flex-basis: 100%;
   display: flex;
   flex-direction: column;
+
+  background: repeating-linear-gradient(to right,
+    rgba($white, 0.23) 0px,
+    rgba($white, 0.23) 1px,
+    transparent 1px,
+    transparent 20.5%
+  );
+  background-size: calc(100% - 240px) 100%;
+  background-position: center;
 }
 
 .banner__intro {
@@ -79,6 +91,9 @@
 }
 
 .banner__social {
+  position: relative;
+  z-index: 2;
+
   margin-top: 110px;
   margin-left: auto;
 }
@@ -105,6 +120,15 @@
 
   .banner__inner {
     @include container_tablet;
+
+    background: repeating-linear-gradient(to right,
+      rgba($white, 0.23) 0px,
+      rgba($white, 0.23) 1px,
+      transparent 1px,
+      transparent 35%
+    );
+    background-size: calc(100% - 220px) 100%;
+    background-position: 110px;
   }
 
   .banner__intro {
@@ -169,6 +193,8 @@
 
   .banner__inner {
     @include container_mobile;
+
+    background: none;
   }
 
   .banner__intro {
