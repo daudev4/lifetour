@@ -1,0 +1,48 @@
+.social {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.social__item {
+  width: 21px;
+  height: 21px;
+  margin-right: 17px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    background-color: rgba($background-color_accent, 0.43);
+    @include transition;
+
+    &:hover,
+    &:focus {
+      background-color: $background-color_accent;
+      transform: scale(1.2);
+    }
+
+    &:active {
+      background-color: $background-color_primary;
+
+      svg {
+        fill: $text-color_accent;
+      }
+    }
+  }
+
+  svg {
+    display: block;
+
+    @include transition;
+
+    fill: $text-color_secondary;
+  }
+}
