@@ -1,0 +1,268 @@
+.trip {
+  position: relative;
+
+  z-index: 3;
+
+  display: flex;
+  flex-direction: column;
+  width: 384px;
+  min-height: 412px;
+  padding: 20px;
+
+  @include font($font-family_primary, $font-size_xs, 500, $font-size_xs);
+  color: $text-color_secondary;
+
+  background-color: $background-color_secondary;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  a {
+    color: inherit
+  }
+
+  h3 {
+    position: relative;
+
+    order: 1;
+    max-width: 270px;
+    margin: 0;
+    margin-bottom: 35px;
+
+    @include font($font-family_primary, 24px, 700, 29px);
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      left: 0;
+      bottom: -17px;
+
+      width: 80px;
+      height: 1px;
+
+      background-color: rgba($white, 0.28);
+    }
+  }
+
+  svg {
+    fill: $text-color_secondary;
+  }
+}
+
+.trip_elbrus {
+  background-image:
+    linear-gradient(0deg,
+      rgba($black, 0.58) 22.3%,
+      rgba($black, 0) 60.32%
+    ),
+    url("../img/trip-elbrus_desktop@1x.jpg");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  background-image:
+    url("../img/trip-elbrus_desktop@2x.jpg");
+  }
+}
+
+.trip_belukha {
+  background-image:
+    linear-gradient(0deg,
+      rgba($black, 0.58) 22.3%,
+      rgba($black, 0) 60.32%
+    ),
+    url("../img/trip-belukha_desktop@1x.jpg");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  background-image:
+    linear-gradient(0deg,
+      rgba($black, 0.58) 22.3%,
+      rgba($black, 0) 60.32%
+    ),
+    url("../img/trip-belukha_desktop@2x.jpg");
+  }
+}
+
+.trip_fisht {
+  background-image:
+    linear-gradient(0deg,
+      rgba($black, 0.58) 22.3%,
+      rgba($black, 0) 60.32%
+    ),
+    url("../img/trip-fisht_desktop@1x.jpg");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  background-image:
+    linear-gradient(0deg,
+      rgba($black, 0.58) 22.3%,
+      rgba($black, 0) 60.32%
+    ),
+    url("../img/trip-fisht_desktop@2x.jpg");
+  }
+}
+
+.trip__top {
+  order: 0;
+  display: flex;
+  margin-top: 186px;
+  margin-bottom: 24px;
+}
+
+.trip__location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 115px;
+  margin-right: 8.1%;
+  padding-top: 7px;
+  padding-right: 3px;
+  padding-bottom: 6px;
+
+  @include font($font-family_primary, $font-size_s, 500, 17px);
+  text-align: center;
+
+  background-color: $background-color_accent;
+
+  svg {
+    display: block;
+    margin-right: 7px;
+  }
+}
+
+.trip__period {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.trip__days,
+.trip__nights {
+  display: flex;
+  align-items: center;
+  min-width: 100px;
+
+  svg {
+    margin-right: 7px;
+  }
+
+  span {
+    @include font($font-family_primary, $font-size_xs, 500, $font-size_xs);
+  }
+}
+
+.trip__parameters {
+  @include list-reset;
+
+  order: 2;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 22px;
+}
+
+.trip__parameters-item {
+
+  span {
+    display: block;
+
+    font-weight: 300;
+  }
+
+  b {
+    display: block;
+    margin-top: 6px;
+
+    @include font($font-family_primary, 13px, 700, 158.86%);
+  }
+}
+
+.trip__dificulty-rate {
+  width: 80px;
+  display: flex;
+  justify-content: space-between;
+
+  svg {
+    margin-top: 10px;
+
+    fill: $text-color_secondary;
+    stroke: $text-color_secondary;
+  }
+}
+
+.trip__date {
+  padding-right: 5px;
+}
+
+
+@media (max-width: $max-width_mobile) {
+  .trip {
+    width: 280px;
+    padding: 8px;
+  }
+
+  .trip__top {
+    flex-wrap: wrap;
+    margin-top: 149px;
+  }
+
+  .trip__period {
+    order: -1;
+    margin-bottom: 27px;
+  }
+
+  .trip__parameters {
+    padding-right: 0;
+  }
+
+  .trip_elbrus {
+    background-image:
+      linear-gradient(0deg,
+        rgba($black, 0.58) 22.3%,
+        rgba($black, 0) 60.32%
+      ),
+      url("../img/trip-elbrus_mobile@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image:
+      linear-gradient(0deg,
+        rgba($black, 0.58) 22.3%,
+        rgba($black, 0) 60.32%
+      ),
+      url("../img/trip-elbrus_mobile@2x.jpg");
+    }
+  }
+
+  .trip_belukha {
+    background-image:
+      linear-gradient(0deg,
+        rgba($black, 0.58) 22.3%,
+        rgba($black, 0) 60.32%
+      ),
+      url("../img/trip-belukha_mobile@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image:
+      linear-gradient(0deg,
+        rgba($black, 0.58) 22.3%,
+        rgba($black, 0) 60.32%
+      ),
+      url("../img/trip-belukha_mobile@2x.jpg");
+    }
+  }
+}
+
+.trip_fisht {
+  background-image:
+    linear-gradient(0deg,
+      rgba($black, 0.58) 22.3%,
+      rgba($black, 0) 60.32%
+    ),
+    url("../img/trip-fisht_mobile@1x.jpg");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  background-image:
+    linear-gradient(0deg,
+      rgba($black, 0.58) 22.3%,
+      rgba($black, 0) 60.32%
+    ),
+    url("../img/trip-fisht_mobile@2x.jpg");
+  }
+}

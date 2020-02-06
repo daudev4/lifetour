@@ -94,8 +94,8 @@
   position: relative;
   z-index: 2;
 
+  align-self: flex-end;
   margin-top: 110px;
-  margin-left: auto;
 }
 
 @media (max-width: $max-width_tablet) {

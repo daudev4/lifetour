@@ -1,10 +1,8 @@
 .button {
   @include button-reset;
   display: inline-block;
-  padding-top: 18px;
-  padding-right: 40px;
-  padding-left: 40px;
-  min-height: 60px;
+  padding: 18px 40px;
+
 
   @include font($font-family_primary, $font-size_m, 400, 158.86%);
   color: $text-color_secondary;
@@ -32,9 +30,9 @@
 
 @media (max-width: $max-width_tablet) {
   .button {
-    min-height: 47px;
     padding-top: 12px;
     padding-right: 23px;
+    padding-bottom: 13px;
     padding-left: 23px;
 
     font-size: $font-size_s;

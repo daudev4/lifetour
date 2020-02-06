@@ -1,0 +1,148 @@
+.tours {
+  padding-top: 72px;
+  padding-bottom: 32px;
+
+  background-image: url('../img/tours-bg_desktop@1x.png');
+  background-repeat: no-repeat;
+  background-position: 893px -92px;
+  background-size: 1859px 1240px;
+}
+
+.tours__inner {
+  @include container_desktop;
+  display: flex;
+  flex-wrap: wrap;
+
+  h2 {
+    margin-right: auto;
+    margin-bottom: 50px;
+
+    &::before {
+      content: "Ближайшие туры";
+    }
+  }
+
+  .slider__controls {
+    align-self: flex-start;
+    margin-top: 15px;
+  }
+}
+
+.tours__list {
+  @include list-reset;
+
+  display: flex;
+}
+
+.tours__item {
+  padding-right: 22px;
+
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+.tours__all {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 60px;
+
+  @include font($font-family_primary, $font-size_m, 700, $line-height_s);
+  color: $text-color_primary;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  @include transition;
+
+  span {
+    padding-right: 10px;
+  }
+
+  &::after {
+    content: "";
+
+    width: 9px;
+    height: 9px;
+
+    border-top-width: 0;
+    border-left-width: 0;
+    border-bottom-width: 2px;
+    border-right-width: 2px;
+    border-color: $text-color_primary;
+    border-style: solid;
+    transform: rotate(-45deg);
+  }
+
+  &:hover,
+  &:focus {
+    color: $text-color_accent;
+
+    transform: scale(1.2);
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: $max-width_tablet) {
+
+  .tours {
+    padding-top: 80px;
+    padding-bottom: 60px;
+
+    background-image: url('../img/tours-bg_tablet@1x.png');
+    background-position: 474px 32px;
+    background-size: 1440px 960px;
+  }
+
+  .tours__inner {
+    @include container_tablet;
+
+    h2 {
+      margin-bottom: 57px;
+    }
+
+    .slider__controls {
+      margin-top: -2px;
+    }
+  }
+
+  .tours__all {
+    margin-top: 42px;
+  }
+}
+
+@media (max-width: $max-width_mobile) {
+
+  .tours {
+    padding-top: 46px;
+
+    background-image: url('../img/tours-bg_mobile@1x.png');
+    background-position: 106px -11px;
+    background-size: 1241px 828px;
+  }
+
+  .tours__inner {
+    @include container_mobile;
+
+    h2 {
+      max-width: 60%;
+      margin-bottom: 0;
+    }
+
+    .slider__controls {
+      margin-top: 13px;
+      margin-bottom: 28px;
+    }
+  }
+
+  .tours__item {
+    padding-right: 40px;
+  }
+
+  .tours__all {
+    margin-top: 28px;
+  }
+}
