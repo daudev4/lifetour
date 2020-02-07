@@ -2,6 +2,8 @@
   display: flex;
   align-items: center;
 
+  color: $text-color_primary;
+
   svg {
     flex-shrink: 0;
     display: block;
@@ -9,7 +11,7 @@
     height: auto;
     margin-right: 22px;
 
-    fill: $text-color_secondary;
+    fill: $text-color_primary;
   }
 
   p {
@@ -30,52 +32,5 @@
 
   span {
     @include font ($font-family_primary, 8px, 400, 10px);
-  }
-}
-
-@media (max-width: $max-width_tablet) {
-
-  .logo {
-
-    svg {
-      width: 37px;
-      margin-right: 13px;
-    }
-
-    p {
-      padding-top: 0;
-    }
-
-    b {
-      margin-bottom: 1px;
-
-      font-size: 16px;
-      line-height: 20px;
-    }
-
-    span {
-      font-size: 6px;
-      line-height: 7px;
-    }
-
-  }
-}
-
-@media (max-width: $max-width_mobile) {
-  .logo {
-    svg {
-      width: 30px;
-      margin-right: 10px;
-    }
-
-    b {
-      font-size: 12px;
-      line-height: 15px;
-    }
-
-    span {
-      font-size: 4.3px;
-      line-height: 5px;
-    }
   }
 }

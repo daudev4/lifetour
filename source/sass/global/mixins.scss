@@ -51,6 +51,24 @@
   transition: $property $duration $function $delay;
 }
 
+@mixin link-effects($hover-color: $text-color_primary, $active-opacity: 0.5) {
+    &[href]:hover,
+    &[href]:focus {
+      color: $hover-color;
+      transform: scale(1.2);
+
+      svg {
+        @include transition;
+
+        fill: $hover-color;
+      }
+    }
+
+    &:active {
+      opacity: $active-opacity;
+    }
+}
+
 @mixin font($family, $size, $weight, $height) {
   font-family: $family;
   font-size: $size;

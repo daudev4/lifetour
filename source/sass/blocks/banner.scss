@@ -96,6 +96,33 @@
 
   align-self: flex-end;
   margin-top: 110px;
+
+  .social__item {
+    width: 21px;
+    height: 21px;
+    margin-right: 17px;
+  }
+
+  a {
+    background-color: rgba($background-color_accent, 0.43);
+
+    &:hover,
+    &:focus {
+      background-color: $background-color_accent;
+    }
+
+    &:active {
+      background-color: $background-color_primary;
+
+      svg {
+        fill: $text-color_accent;
+      }
+    }
+  }
+
+  svg {
+    fill: $text-color_secondary;
+  }
 }
 
 @media (max-width: $max-width_tablet) {

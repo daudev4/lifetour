@@ -16,21 +16,7 @@
 
     @include transition;
 
-    &[href]:hover,
-    &[href]:focus {
-      color: $text-color_primary;
-      transform: scale(1.2);
-
-      svg {
-        @include transition;
-
-        fill: $text-color_primary;
-      }
-    }
-
-    &:active {
-      opacity: 0.5;
-    }
+    @include link-effects($text-color_primary, 0.5);
   }
 }
 
@@ -49,6 +35,10 @@
 
 .page-header__logo {
   margin-right: 7%;
+
+  svg {
+    fill: $text-color_secondary;
+  }
 }
 
 .page-header__nav {
@@ -131,6 +121,28 @@
 
   .page-header__logo {
     margin-right: 64px;
+
+    svg {
+      width: 37px;
+      margin-right: 13px;
+    }
+
+    p {
+      padding-top: 0;
+    }
+
+    b {
+      margin-bottom: 1px;
+
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    span {
+      font-size: 6px;
+      line-height: 7px;
+    }
+
   }
 
   .page-header__nav {
@@ -165,6 +177,21 @@
   .page-header__logo {
     margin-right: 0;
     margin-bottom: 5px;
+
+    svg {
+      width: 30px;
+      margin-right: 10px;
+    }
+
+    b {
+      font-size: 12px;
+      line-height: 15px;
+    }
+
+    span {
+      font-size: 4.3px;
+      line-height: 5px;
+    }
   }
 
   .page-header__phone {

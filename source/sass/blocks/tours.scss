@@ -74,16 +74,7 @@
     transform: rotate(-45deg);
   }
 
-  &:hover,
-  &:focus {
-    color: $text-color_accent;
-
-    transform: scale(1.2);
-  }
-
-  &:active {
-    opacity: 0.5;
-  }
+  @include link-effects($text-color_accent, 0.5);
 }
 
 @media (max-width: $max-width_tablet) {

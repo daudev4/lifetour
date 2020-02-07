@@ -3,6 +3,8 @@
 }
 
 .slider__list {
+  width: calc(100% + 120px);
+
   overflow-x: auto;
   scroll-snap-type: x mandatory;
 
@@ -41,17 +43,20 @@
 }
 
 @media (max-width: $max-width_tablet) {
+
   .slider {
     .slider__item:last-child {
       padding-right: 110px;
     }
   }
+
   .slider__list {
     width: calc(100% + 110px);
   }
 }
 
 @media (max-width: $max-width_mobile) {
+
   .slider {
     .slider__item:last-child {
       padding-right: 20px;
