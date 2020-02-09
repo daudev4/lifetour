@@ -1,0 +1,250 @@
+@keyframes cloud-scale {
+  0% {
+    transfomrm: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.feedback {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  @include font($font-family_primary, $font-size_m, 400, 151.03%);
+  color: $text-color_secondary;
+
+  background-color: $background-color_secondary;
+  background-image: url("../img/feedback-bg_desktop@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 48% 80%;
+  background-size: cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/feedback-bg_desktop@2x.jpg");
+  }
+}
+
+.feedback__inner {
+  position: relative;
+  z-index: 2;
+
+  @include container_desktop;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 795px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 29.6%;
+    left: 78.6%;
+
+    width: 470px;
+    height: 160px;
+
+    background-image: url("../img/feedback-cloud@1x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @include transition;
+    animation: 5s cloud-scale infinite ease-in-out;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/feedback-cloud@2x.png");
+    }
+  }
+}
+
+.feedback__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+
+  text-align: center;
+
+  b {
+    margin: 0;
+    margin-bottom: 9px;
+
+    @include font($font-family_primary, $font-size_xxxl, 800, $line-height_xxxl);
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 10px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.feedback__form {
+  display: flex;
+  margin-top: 44px;
+
+  input {
+    width: 354px;
+    margin-right: 13px;
+    padding: 19px 0;
+    padding-left: 30px;
+
+    @include font($font-family_primary, $font-size_m, 400, 151.03%);
+    color: $text-color_primary;
+
+    border: none;
+    background-color: $background-color_primary;
+    border: 1px solid rgba(2, 102, 193, 0.112);
+
+    &:last-of-type {
+      margin: 0;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: $text-color_accent;
+
+      &:-ms-input-placeholder {
+        color: $text-color_accent;
+      }
+
+      &::placeholder {
+        color: $text-color_accent;
+      }
+    }
+
+    &:-ms-input-placeholder {
+      color: $gray;
+
+      @include transition;
+    }
+
+    &::placeholder {
+      color: $gray;
+
+      @include transition;
+    }
+  }
+
+  input[type="tel"] {
+    padding-left: 37px;
+  }
+
+  button {
+    min-width: 246px;
+    margin-left: 18px;
+  }
+}
+
+@media (max-width: $max-width_tablet) {
+
+  .feedback {
+    background-image: url("../img/feedback-bg_tablet@1x.jpg");
+    background-position: 47.7% 87%;
+    background-size: 1630px 1531px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/feedback-bg_tablet@2x.jpg");
+    }
+  }
+
+  .feedback__inner {
+    @include container_tablet;
+    min-height: 772px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .feedback__content {
+    max-width: 380px;
+    padding-top: 0;
+
+    b {
+      margin-bottom: 21px;
+
+      font-size: $font-size_xxl;
+      line-height: $line-height_xxl;
+    }
+  }
+
+  .feedback__form {
+    flex-direction: column;
+    margin-top: 37px;
+    margin-left: 30px;
+
+    input {
+      display: flex;
+      justify-content: center;
+      width: 268px;
+      margin-right: 0;
+      margin-bottom: 6px;
+      padding-top: 15px;
+      padding-bottom: 13px;
+      padding-left: 0;
+
+      font-size: $font-size_s;
+      text-align: center;
+    }
+
+    input[type="tel"] {
+      padding-left: 0;
+    }
+
+    button {
+      margin-top: 8px;
+      margin-left: 0;
+      padding: 15px 0;
+
+      line-height: 151.03%;
+    }
+  }
+}
+
+@media (max-width: $max-width_mobile) {
+
+  .feedback {
+    background-image: url("../img/feedback-bg_mobile@1x.jpg");
+    background-position: 41% 86%;
+    background-size: 1404px 1190px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/feedback-bg_mobile@2x.jpg");
+    }
+  }
+
+  .feedback__inner {
+    @include container_mobile;
+    min-height: 660px;
+    justify-content: flex-start;
+  }
+
+  .feedback__content {
+    padding-top: 190px;
+
+    b {
+      margin-bottom: 20px;
+    }
+
+  }
+
+  .feedback__form {
+    margin-top: 31px;
+    margin-left: 0;
+  }
+}

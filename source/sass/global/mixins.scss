@@ -52,21 +52,21 @@
 }
 
 @mixin link-effects($hover-color: $text-color_primary, $active-opacity: 0.5) {
-    &[href]:hover,
-    &[href]:focus {
-      color: $hover-color;
-      transform: scale(1.2);
+  &[href]:hover,
+  &[href]:focus {
+    color: $hover-color;
+    transform: scale(1.2);
 
-      svg {
-        @include transition;
+    svg {
+      @include transition;
 
-        fill: $hover-color;
-      }
+      fill: $hover-color;
     }
+  }
 
-    &:active {
-      opacity: $active-opacity;
-    }
+  &:active {
+    opacity: $active-opacity;
+  }
 }
 
 @mixin font($family, $size, $weight, $height) {

@@ -445,6 +445,35 @@
       </a>
     </div>
   </section>
+
+  <section class="feedback">
+    <h2 class="visually-hidden">
+      Обратная связь
+    </h2>
+    <div class="feedback__inner">
+      <div class="feedback__content">
+        <b>
+          Остались вопросы?
+        </b>
+        <p>
+          Заполните форму и наш оператор свяжется с вами для консультации.
+        </p>
+        <form class="feedback__form" action="#">
+          <label class="visually-hidden" for="form-name">
+            Ваше имя
+          </label>
+          <input id="form-name" type="text" name="form-name" placeholder="Как к вам обращаться?" size="12" autocomplete="name" required="">
+          <label class="visually-hidden" for="form-phone">
+            Ваш телефон
+          </label>
+          <input id="form-phone" type="tel" name="form-phone" placeholder="Телефон" autocomplete="tel" pattern="^\+\d{1}\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}" required="">
+          <button class="button" type="submit">
+            Отправить
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer class="page-footer">

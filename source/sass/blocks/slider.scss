@@ -31,14 +31,6 @@
 
   svg {
     display: block;
-
-    fill: $text-color_secondary;
-  }
-
-  &:active {
-    svg {
-      fill: $text-color_accent;
-    }
   }
 }
 

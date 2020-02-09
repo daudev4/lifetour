@@ -1,6 +1,10 @@
 .page-footer {
+  position: relative;
+  z-index: 5;
+
   width: 100%;
-  padding-top: 16px;
+  margin-top: -20px;;
+  padding-top: 20px;
   padding-bottom: 44px;
 
   @include font($font-family_primary, $font-size_m, 400, $line-height_l);
@@ -95,11 +99,6 @@
     width: 28px;
     height: 28px;
     margin-right: 22px;
-
-    &:last-child {
-      margin-right: 0;
-    }
-
   }
 
   a {

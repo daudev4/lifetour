@@ -8,23 +8,31 @@
   color: $text-color_secondary;
   text-align: center;
 
+  fill: $text-color_secondary;
+
   box-sizing: border-box;
   background: none;
   background-color: $background-color_accent;
   cursor: pointer;
+  outline: none;
 
   @include transition;
 
   &:hover,
   &:focus {
-    transform: scale(1.2);
-  }
-
-  &:active {
     color: $text-color_secondary;
+
+    fill: $text-color_accent;
 
     box-shadow: inset 0 0 0 3px $background-color_accent;
     background-color: transparent;
+  }
+
+  &:active {
+    color: $text-color_accent;
+
+    background-color: $background-color_primary;
+    box-shadow: none;
   }
 }
 
