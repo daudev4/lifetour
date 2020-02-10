@@ -10,7 +10,7 @@
   padding: 20px;
 
   @include font($font-family_primary, $font-size_xs, 500, $font-size_xs);
-  color: $text-color_secondary;
+  color: $text-color_additional;
 
   background-color: $background-color_secondary;
   background-repeat: no-repeat;
@@ -46,7 +46,7 @@
   }
 
   svg {
-    fill: $text-color_secondary;
+    fill: $text-color_additional;
   }
 }
 
@@ -182,8 +182,8 @@
   svg {
     margin-top: 10px;
 
-    fill: $text-color_secondary;
-    stroke: $text-color_secondary;
+    fill: $text-color_additional;
+    stroke: $text-color_additional;
   }
 }
 

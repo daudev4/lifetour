@@ -4,7 +4,7 @@
   display: flex;
 
   @include font($font-family_primary, $font-size_l, 400, 148.6%);
-  color: $text-color_secondary;
+  color: $text-color_additional;
 
   background-color: $background-color_secondary;
   background-image: url("../img/banner-bg_desktop@1x.jpg");
@@ -121,7 +121,7 @@
   }
 
   svg {
-    fill: $text-color_secondary;
+    fill: $text-color_additional;
   }
 }
 

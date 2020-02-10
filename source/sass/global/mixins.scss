@@ -51,7 +51,7 @@
   transition: $property $duration $function $delay;
 }
 
-@mixin link-effects($hover-color: $text-color_primary, $active-opacity: 0.5) {
+@mixin link-effects($hover-color: $text-color_secondary, $active-opacity: 0.5) {
   &[href]:hover,
   &[href]:focus {
     color: $hover-color;

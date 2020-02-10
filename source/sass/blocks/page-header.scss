@@ -7,7 +7,7 @@
   width: 100%;
 
   @include font($font-family_primary, $font-size_m, 400, $line-height_l);
-  color: $text-color_secondary;
+  color: $text-color_additional;
 
   background-color: transparent;
 
@@ -16,7 +16,7 @@
 
     @include transition;
 
-    @include link-effects($text-color_primary, 0.5);
+    @include link-effects($text-color_secondary, 0.5);
   }
 }
 
@@ -37,7 +37,7 @@
   margin-right: 7%;
 
   svg {
-    fill: $text-color_secondary;
+    fill: $text-color_additional;
   }
 }
 
@@ -102,7 +102,7 @@
       display: block;
       @include transition;
 
-      fill: $text-color_secondary
+      fill: $text-color_additional
     }
 
     &:hover,
@@ -110,7 +110,7 @@
       svg {
         transform: scale(1.2);
 
-        fill: $text-color_primary;
+        fill: $text-color_secondary;
       }
     }
 

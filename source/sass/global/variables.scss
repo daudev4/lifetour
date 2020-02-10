@@ -16,8 +16,9 @@ $background-color_primary: $white;
 $background-color_secondary: $blue_dark;
 $background-color_accent: $blue;
 
-$text-color_primary: $blue_dark;
-$text-color_secondary: $white;
+$text-color_primary: $black;
+$text-color_secondary: $blue_dark;
+$text-color_additional: $white;
 $text-color_accent: $blue;
 
 // fonts
@@ -44,6 +45,7 @@ $line-height_xs: 15px;
 // breakpoints
 $max-width_mobile: 767px;
 $max-width_tablet: 1023px;
+$max-width_desktop: 1440px;
 
 // retina
 $retina-dpi: 144dpi;

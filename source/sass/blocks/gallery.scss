@@ -1,0 +1,173 @@
+.gallery {
+  padding-top: 114px;
+
+  @include font($font-family_primary, $font-size_m, 400, $line-height_m);
+  color: $text-color_primary;
+
+  background-color: $background-color_primary;
+}
+
+.gallery__inner {
+  @include container_desktop;
+}
+
+.gallery__head {
+  margin-bottom: 46px;
+
+  h2, p {
+    margin: 0;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+
+    &::before {
+      content: "Фотогалерея";
+    }
+  }
+
+  a {
+    font-weight: 700;
+    color: inherit;
+  }
+
+  .slider__controls {
+    align-self: flex-end;
+    margin-top: 0;
+    margin-bottom: 6px;
+  }
+
+}
+
+.gallery__description {
+  max-width: 710px;
+}
+
+.gallery__list {
+  padding-left: 0;
+
+  .gallery__item:last-child {
+    padding-right: 0;
+  }
+}
+
+.gallery__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  // // align-content: flex-start;
+  flex-wrap: wrap;
+  max-width: 1441px;
+  height: 450px;
+}
+
+.gallery__item {
+  max-height: 450px;
+  padding-left: 5px;
+
+  &_small {
+    height: 40%;
+  }
+
+  &_medium {
+    padding-top: 5px;
+    height: 60%;
+  }
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    max-height: 450px;
+  }
+}
+
+@media (max-width: $max-width_tablet) {
+
+  .gallery {
+    padding-top: 120px;
+  }
+
+  .gallery__inner {
+    @include container_tablet;
+  }
+
+  .gallery__head {
+    margin-bottom: 35px;
+
+    h2 {
+      margin-bottom: 26px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 21px
+    }
+
+    .slider__controls {
+      margin-bottom: 0;
+    }
+  }
+
+  .gallery__description {
+    max-width: 390px;
+  }
+
+
+  .gallery__list {
+    .gallery__item:last-child {
+      padding-right: 0;
+    }
+  }
+}
+
+@media (max-width: $max-width_mobile) {
+
+  .gallery {
+    padding-top: 58px;
+  }
+
+  .gallery__inner {
+    @include container_mobile;
+  }
+
+  .gallery__head {
+    h2 {
+      margin-bottom: 16px;
+    }
+
+    .slider__controls {
+      margin-bottom: 4px;
+    }
+  }
+
+  .gallery__list {
+    max-height: 260px;
+  }
+
+  .gallery__item {
+    padding-left: 3px;
+
+    &_small {
+      img {
+        width: 172px;
+      }
+    }
+
+    &_medium {
+      padding-top: 3px;
+      img {
+        width: 172px;
+      }
+    }
+
+    &_large  {
+      img {
+        width: 159px;
+      }
+    }
+  }
+}

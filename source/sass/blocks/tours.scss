@@ -2,6 +2,10 @@
   padding-top: 72px;
   padding-bottom: 32px;
 
+  @include font($font-family_primary, $font-size_m, 400, $line-height_l);
+  color: $text-color_primary;
+
+  background-color: $background-color_primary;
   background-image: url('../img/tours-bg_desktop@1x.png');
   background-repeat: no-repeat;
   background-position: 893px -92px;
@@ -10,28 +14,20 @@
 
 .tours__inner {
   @include container_desktop;
-  display: flex;
-  flex-wrap: wrap;
+}
+
+.tours__head {
+  margin-bottom: 42px;
 
   h2 {
     margin-right: auto;
-    margin-bottom: 50px;
+
+    color: $text-color_secondary;
 
     &::before {
       content: "Ближайшие туры";
     }
   }
-
-  .slider__controls {
-    align-self: flex-start;
-    margin-top: 15px;
-  }
-}
-
-.tours__list {
-  @include list-reset;
-
-  display: flex;
 }
 
 .tours__item {
@@ -44,14 +40,16 @@
 
 .tours__all {
   display: flex;
+  justify-content: center;
   align-items: center;
   margin: 0 auto;
   margin-top: 60px;
 
   @include font($font-family_primary, $font-size_m, 700, $line-height_s);
-  color: $text-color_primary;
+  color: $text-color_secondary;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  text-align: center;
 
   @include transition;
 
@@ -69,7 +67,7 @@
     border-left-width: 0;
     border-bottom-width: 2px;
     border-right-width: 2px;
-    border-color: $text-color_primary;
+    border-color: $text-color_secondary;
     border-style: solid;
     transform: rotate(-45deg);
   }
@@ -90,7 +88,9 @@
 
   .tours__inner {
     @include container_tablet;
+  }
 
+  .tours__head {
     h2 {
       margin-bottom: 57px;
     }
@@ -117,7 +117,9 @@
 
   .tours__inner {
     @include container_mobile;
+  }
 
+  .tours__head {
     h2 {
       max-width: 60%;
       margin-bottom: 0;

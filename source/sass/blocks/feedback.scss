@@ -19,7 +19,7 @@
   flex-direction: column;
 
   @include font($font-family_primary, $font-size_m, 400, 151.03%);
-  color: $text-color_secondary;
+  color: $text-color_additional;
 
   background-color: $background-color_secondary;
   background-image: url("../img/feedback-bg_desktop@1x.jpg");
@@ -173,10 +173,10 @@
 
   .feedback__content {
     max-width: 380px;
-    padding-top: 0;
+    padding-top: 4px;
 
     b {
-      margin-bottom: 21px;
+      margin-bottom: 22px;
 
       font-size: $font-size_xxl;
       line-height: $line-height_xxl;
@@ -231,16 +231,15 @@
   .feedback__inner {
     @include container_mobile;
     min-height: 660px;
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   .feedback__content {
-    padding-top: 190px;
+    padding-top: 38px;
 
     b {
       margin-bottom: 20px;
     }
-
   }
 
   .feedback__form {

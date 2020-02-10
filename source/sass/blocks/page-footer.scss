@@ -8,7 +8,7 @@
   padding-bottom: 44px;
 
   @include font($font-family_primary, $font-size_m, 400, $line-height_l);
-  color: $text-color_primary;
+  color: $text-color_secondary;
 
   background-color: $background-color_primary;
 }
@@ -44,7 +44,7 @@
   margin-right: 7%;
 
   svg {
-    fill: $text-color_primary;
+    fill: $text-color_secondary;
   }
 
   b {
@@ -103,14 +103,14 @@
 
   a {
     background-color: $background-color_primary;
-    border: 1px solid rgba($text-color_primary, 0.43);
+    border: 1px solid rgba($text-color_secondary, 0.43);
 
     &:hover,
     &:focus {
       background-color: $background-color_secondary;
 
       svg {
-        fill: $text-color_secondary;
+        fill: $text-color_additional;
       }
     }
 
@@ -120,13 +120,13 @@
   }
 
   svg {
-    fill: $text-color_primary;
+    fill: $text-color_secondary;
   }
 }
 
 .page-footer__privacy {
   @include font($font-family_primary, $font-size_xs, 400, $line-height_m);
-  color: $text-color_primary;
+  color: $text-color_secondary;
 
   @include link-effects($text-color_accent, 0.5);
   @include transition;
@@ -145,7 +145,7 @@
 
   .page-footer__content {
     flex-direction: column;
-    margin-bottom: 50px;
+    margin-bottom: 52px;
   }
 
   .page-footer__logo {

@@ -5,6 +5,7 @@
   margin: 0;
 
   @include font($font-family_primary, $font-size_xxxl, 800, $line-height_xxxl);
+  color: $text-color_secondary;
 
   &::before {
     content: "";
@@ -18,7 +19,7 @@
 
     font-size: 55px;
     line-height: 67px;
-    color: rgba($text-color_primary, 0.03);
+    color: rgba($text-color_secondary, 0.03);
     white-space: nowrap;
   }
 }

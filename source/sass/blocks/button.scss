@@ -5,10 +5,10 @@
 
 
   @include font($font-family_primary, $font-size_m, 400, 158.86%);
-  color: $text-color_secondary;
+  color: $text-color_additional;
   text-align: center;
 
-  fill: $text-color_secondary;
+  fill: $text-color_additional;
 
   box-sizing: border-box;
   background: none;
@@ -20,7 +20,7 @@
 
   &:hover,
   &:focus {
-    color: $text-color_secondary;
+    color: $text-color_additional;
 
     fill: $text-color_accent;
 
