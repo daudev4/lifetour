@@ -1,0 +1,135 @@
+.review {
+  width: 388px;
+  min-height: 504px;
+  margin: 0;
+  padding-top: 46px;
+  padding-right: 15px;
+  padding-bottom: 32px;
+  padding-left: 38px;
+
+  @include font($font-family_primary, $font-size_s, 400, 23px);
+  color: $text-color_primary;
+
+  background-color: rgba($background-color_primary, 0.09);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.036);
+}
+
+.review__author {
+  display: flex;
+  align-items: center;
+  margin-bottom: 42px;
+
+  p {
+    margin: 0;
+    margin-top: 4px;
+    margin-left: 18px;
+  }
+
+  cite,
+  span {
+    display: block;
+
+    font-style: normal;
+    line-height: 19px
+  }
+
+  cite {
+    margin-bottom: 6px;
+
+    font-weight: 700;
+  }
+}
+
+.review__text {
+  position: relative;
+
+  margin: 0;
+
+  p {
+    position: relative;
+    z-index: 1;
+
+    margin: 0;
+    margin-bottom: 25px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.review__quote-mark {
+  position: relative;
+  z-index: -1;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+
+    width: 30px;
+    height: 22px;
+
+    opacity: 0.05;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% 100%;
+  }
+
+  &_start {
+    &::before {
+      top: -11px;
+      left: 4px;
+
+      background-image: url("../img/quote-mark_start.svg");
+    }
+  }
+
+  &_end {
+    &::before {
+      bottom: -15px;
+      left: -25px;
+
+      background-image: url("../img/quote-mark_end.svg");
+    }
+  }
+}
+
+@media (max-width: $max-width_mobile) {
+
+  .review {
+    width: 280px;
+    min-height: 535px;
+    padding-left: 14px;
+    padding-right: 5px;
+  }
+
+  .review__author {
+    margin-bottom: 18px;
+
+    p {
+      margin-left: 9px;
+    }
+  }
+
+  .review__quote-mark {
+
+    &_start {
+      &::before {
+        top: -10px;
+        left: -5px;
+
+        background-image: url("../img/quote-mark_start.svg");
+      }
+    }
+
+    &_end {
+      &::before {
+        bottom: -15px;
+        left: -13px;
+
+        background-image: url("../img/quote-mark_end.svg");
+      }
+    }
+  }
+}

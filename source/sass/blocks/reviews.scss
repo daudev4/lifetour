@@ -1,0 +1,73 @@
+.reviews {
+  padding-top: 108px;
+
+  @include font($font-family_primary, $font-size_s, 400, 23px);
+  color: $text-color_primary;
+
+  background-color: $background-color_primary;
+}
+
+.reviews__inner {
+  @include container_desktop;
+}
+
+.reviews__head {
+  margin-bottom: 34px;
+
+  h2 {
+    &::before {
+      content: "Отзывы";
+    }
+  }
+
+  .slider__controls {
+    margin-top: 12px;
+  }
+}
+
+.reviews__item {
+  padding-right: 15px;
+}
+
+@media (max-width: $max-width_tablet) {
+
+  .reviews {
+    padding-top: 77px;
+  }
+
+  .reviews__inner {
+    @include container_tablet;
+  }
+
+  .reviews__head {
+    margin-bottom: 47px;
+
+    .slider__controls {
+      margin-top: 0;
+    }
+  }
+}
+
+@media (max-width: $max-width_mobile) {
+
+  .reviews {
+    padding-top: 33px;
+  }
+
+  .reviews__inner {
+    @include container_mobile;
+  }
+
+  .reviews__item {
+    padding-right: 20px;
+  }
+
+  .reviews__head {
+    margin-bottom: 31px;
+
+    h2 {
+      margin-top: 6px;
+    }
+  }
+}
+

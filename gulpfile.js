@@ -123,6 +123,8 @@ gulp.task('build', gulp.series(
   'html',
   'concat-js-main',
   'concat-js-vendor',
+  'images',
+  'webp',
   'refresh'
 ));
 
