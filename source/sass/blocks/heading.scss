@@ -2,7 +2,6 @@
   position: relative;
 
   flex-grow: 1;
-  align-self: flex-start;
   margin: 0;
 
   @include font($font-family_primary, $font-size_xxxl, 800, $line-height_xxxl);

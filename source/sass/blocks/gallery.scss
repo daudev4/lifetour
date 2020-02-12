@@ -54,11 +54,10 @@
 .gallery__list {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  // // align-content: flex-start;
+  align-content: flex-start;
   flex-wrap: wrap;
   max-width: 1441px;
-  height: 450px;
+  max-height: 450px;
 }
 
 .gallery__item {
@@ -72,6 +71,10 @@
   &_medium {
     padding-top: 5px;
     height: 60%;
+  }
+
+  &_large {
+    height: 100%;
   }
 
   &:first-child {

@@ -1,5 +1,5 @@
 .reviews {
-  padding-top: 108px;
+  padding-top: 60px;
 
   @include font($font-family_primary, $font-size_s, 400, 23px);
   color: $text-color_primary;
@@ -32,7 +32,7 @@
 @media (max-width: $max-width_tablet) {
 
   .reviews {
-    padding-top: 77px;
+    padding-top: 42px;
   }
 
   .reviews__inner {

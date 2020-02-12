@@ -1,0 +1,162 @@
+.about {
+  position: relative;
+
+  padding-top: 110px;
+  padding-bottom: 60px;
+
+  @include font($font-family_primary, $font-size_s, 400, 23px);
+  color: $text-color_primary;
+
+  background-color: $background-color_primary;
+
+
+  &::before {
+    content: "";
+
+    z-index: 0;
+    position: absolute;
+    top: 19px;
+    right: 49.6%;
+
+    width: 730px;
+    height: 570px;
+
+    background-image: url("../img/about-bg_desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% 100%;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/about-bg_desktop@2x.jpg");
+    }
+  }
+}
+
+.about__inner {
+  position: relative;
+  z-index: 5;
+
+  @include container_desktop;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.about__content {
+  width: 45.66%;
+
+  h2 {
+    margin-bottom: 50px;
+
+    &::before {
+      content: "О нас";
+    }
+  }
+}
+
+.about__text-block {
+  margin-bottom: 59px;
+
+  h3 {
+    margin: 0;
+    margin-bottom: 20px;
+
+    @include font($font-family_primary, 21px, 700, 26px);
+    color: $text-color_secondary;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: $max-width_tablet) {
+
+  .about {
+    padding-bottom: 40px;
+
+    &::before {
+      top: 32px;
+      right: 57.7%;
+
+      width: 590px;
+      height: 420px;
+
+      background-image: url("../img/about-bg_tablet@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/about-bg_tablet@2x.jpg");
+      }
+    }
+  }
+
+  .about__inner {
+    @include container_tablet;
+  }
+
+  .about__content {
+    width: 100%;
+
+    h2 {
+      width: 51%;
+      margin-left: auto;
+      margin-bottom: 42px;
+    }
+
+
+  }
+
+  .about__text-block {
+    margin-bottom: 82px;
+
+    h3 {
+      margin-bottom: 23px;
+
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    p {
+      max-width: 540px;
+    }
+
+    &:first-of-type {
+      width: 51%;
+      margin-left: auto;
+    }
+  }
+}
+
+@media (max-width: $max-width_mobile) {
+  .about {
+    padding-top: 380px;
+    padding-bottom: 0;
+
+    &::before {
+      top: -81px;
+      left: -253px;
+    }
+  }
+
+  .about__inner {
+    @include container_mobile;
+  }
+
+  .about__content {
+    h2 {
+      width: 100%;
+      margin-bottom: 46px;
+    }
+  }
+
+  .about__text-block {
+    margin-bottom: 47px;
+
+    &:first-of-type {
+      width: 100%;
+    }
+  }
+}
