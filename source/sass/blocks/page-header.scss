@@ -16,7 +16,7 @@
 
     @include transition;
 
-    @include link-effects($text-color_secondary, 0.5);
+    @include link-effects($text-color_accent, 0.5);
   }
 }
 
