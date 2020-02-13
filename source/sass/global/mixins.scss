@@ -79,3 +79,29 @@
 @mixin font-main($family: $font-family_primary, $size: $font-size_m, $weight: 400, $height: $line-height_m) {
   @include font($family, $size, $weight, $height)
 }
+
+@mixin cloud {
+  content: "";
+
+  z-index: -1;
+  position: absolute;
+
+  width: 470px;
+  height: 160px;
+
+  background-image: url("../img/feedback-cloud@1x.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include transition;
+  animation: 5s cloud-scale infinite ease-in-out;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/feedback-cloud@2x.png");
+  }
+
+  @media (max-width: $max-width_tablet) {
+    display: none;
+  }
+}

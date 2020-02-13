@@ -45,26 +45,10 @@
   min-height: 795px;
 
   &::after {
-    content: "";
+    @include cloud;
 
-    position: absolute;
     top: 29.6%;
     left: 78.6%;
-
-    width: 470px;
-    height: 160px;
-
-    background-image: url("../img/feedback-cloud@1x.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
-    @include transition;
-    animation: 5s cloud-scale infinite ease-in-out;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/feedback-cloud@2x.png");
-    }
   }
 }
 
@@ -165,10 +149,6 @@
   .feedback__inner {
     @include container_tablet;
     min-height: 772px;
-
-    &::after {
-      display: none;
-    }
   }
 
   .feedback__content {

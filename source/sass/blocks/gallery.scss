@@ -8,7 +8,17 @@
 }
 
 .gallery__inner {
+  position: relative;
+  z-index:0;
+
   @include container_desktop;
+
+  &::after {
+    @include cloud;
+
+    top: -70px;
+    left: 78.3%;
+  }
 }
 
 .gallery__head {

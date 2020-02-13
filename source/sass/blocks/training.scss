@@ -13,6 +13,13 @@
   z-index: 2;
 
   @include container_desktop;
+
+  &::after {
+    @include cloud;
+
+    top: -171px;
+    right: 84%;
+  }
 }
 
 .training__description {

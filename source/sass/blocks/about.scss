@@ -40,6 +40,13 @@
   @include container_desktop;
   display: flex;
   justify-content: flex-end;
+
+  &::after {
+    @include cloud;
+
+    top: -87px;
+    left: 69.5%;
+  }
 }
 
 .about__content {
