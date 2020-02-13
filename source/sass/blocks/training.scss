@@ -87,7 +87,8 @@
     width: 100vw;
     height: 1px;
 
-    border: 1px solid #D9E7EA;
+    border: 0 solid #D9E7EA;
+    border-top-width: 1px;
   }
 }
 
@@ -191,7 +192,8 @@
 
       transform: translate(-50%, -54%);
 
-      border-left: none;
+      border-right-width: 1px;
+      border-bottom-width: 1px;
     }
   }
 
