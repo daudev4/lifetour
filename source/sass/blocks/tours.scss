@@ -6,17 +6,39 @@
   color: $text-color_primary;
 
   background-color: $background-color_primary;
-  background-image: url('../img/tours-bg_desktop@1x.png');
-  background-repeat: no-repeat;
-  background-position: 893px -92px;
-  background-size: 1859px 1240px;
 }
 
 .tours__inner {
+  position: relative;
   @include container_desktop;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    z-index: 0;
+
+    left: 891px;
+    top: -92px;
+
+    width: 1859px;
+    height: 1240px;
+
+    background-image: url('../img/tours-bg_desktop@1x.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% 100%;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url('../img/tours-bg_desktop@2x.png');
+    }
+  }
 }
 
 .tours__head {
+  position: relative;
+  z-index: 1;
+
   margin-bottom: 42px;
 
   h2 {
@@ -80,20 +102,28 @@
   .tours {
     padding-top: 80px;
     padding-bottom: 60px;
-
-    background-image: url('../img/tours-bg_tablet@1x.png');
-    background-position: 474px 32px;
-    background-size: 1440px 960px;
   }
 
   .tours__inner {
     @include container_tablet;
+
+    &::after {
+      left: 474px;
+      top: 31px;
+
+      width: 1440px;
+      height: 960px;
+
+      background-image: url('../img/tours-bg_tablet@1x.png');
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url('../img/tours-bg_tablet@2x.png');
+      }
+    }
   }
 
   .tours__head {
-    h2 {
-      margin-bottom: 57px;
-    }
+    margin-bottom: 54px;
 
     .slider__controls {
       margin-top: -2px;
@@ -109,17 +139,29 @@
 
   .tours {
     padding-top: 46px;
-
-    background-image: url('../img/tours-bg_mobile@1x.png');
-    background-position: 106px -11px;
-    background-size: 1241px 828px;
   }
 
   .tours__inner {
     @include container_mobile;
+
+    &::after {
+      left: 106px;
+      top: -11px;
+
+      width: 1241px;
+      height: 828px;
+
+      background-image: url('../img/tours-bg_mobile@1x.png');
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url('../img/tours-bg_mobile@2x.png');
+      }
+    }
   }
 
   .tours__head {
+    margin-bottom: 23px;
+
     h2 {
       max-width: 60%;
       margin-bottom: 0;
@@ -127,7 +169,6 @@
 
     .slider__controls {
       margin-top: 13px;
-      margin-bottom: 28px;
     }
   }
 

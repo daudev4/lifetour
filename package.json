@@ -33,6 +33,7 @@
     "test": "npm run editorconfig && npm run stylelint && eslint source/js/",
     "build": "gulp build",
     "start": "gulp start",
+    "images": "gulp images",
     "webp": "gulp webp",
     "sprite": "gulp sprite"
   },

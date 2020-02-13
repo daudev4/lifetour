@@ -1,7 +1,8 @@
 .about {
   position: relative;
+  z-index: 0;
 
-  padding-top: 110px;
+  padding-top: 126px;
   padding-bottom: 60px;
 
   @include font($font-family_primary, $font-size_s, 400, 23px);
@@ -15,7 +16,7 @@
 
     z-index: 0;
     position: absolute;
-    top: 19px;
+    top: 35px;
     right: 49.6%;
 
     width: 730px;
@@ -76,10 +77,11 @@
 @media (max-width: $max-width_tablet) {
 
   .about {
+    padding-top: 112px;
     padding-bottom: 40px;
 
     &::before {
-      top: 32px;
+      top: 34px;
       right: 57.7%;
 
       width: 590px;
@@ -105,8 +107,6 @@
       margin-left: auto;
       margin-bottom: 42px;
     }
-
-
   }
 
   .about__text-block {
@@ -132,11 +132,11 @@
 
 @media (max-width: $max-width_mobile) {
   .about {
-    padding-top: 380px;
+    padding-top: 384px;
     padding-bottom: 0;
 
     &::before {
-      top: -81px;
+      top: -77px;
       left: -253px;
     }
   }
