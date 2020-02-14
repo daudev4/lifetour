@@ -10,13 +10,14 @@
 
 .tours__inner {
   position: relative;
+  z-index: 0;
   @include container_desktop;
 
   &::after {
     content: "";
 
     position: absolute;
-    z-index: 0;
+    z-index: -1;
 
     left: 891px;
     top: -92px;
