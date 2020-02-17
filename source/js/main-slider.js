@@ -2,32 +2,43 @@
 
 (function () {
 
-  var Slider = function (mainElement) {
-    var self = this;
-    this.body = mainElement.querySelector('.slider__body');
-    this.list = this.body.querySelector('.slider__list');
-    this.listWidth = parseFloat(this.list.scrollWidth);
-    this.items = this.list.querySelectorAll('.slider__item');
-    this.itemWidth = parseFloat(this.items[1].offsetWidth);
-    this.controls = mainElement.querySelector('.slider__controls');
-    this.controls.classList.remove('.slider__controls_hidden');
-    this.controlLeft = this.controls.querySelector('.slider__control_left');
-    this.controlRight = this.controls.querySelector('.slider__control_right');
-    this.controlRight.onclick = function () {
-      self.slideScroll(self.list, self.controlRight, self.itemWidth);
-    };
-    this.controlLeft.onclick = function () {
-      self.slideScroll(self.list, self.controlLeft, self.itemWidth);
-    };
+  var WINDOW_WIDTH_TABLET = 768;
+
+  var slideScroll = function (element, direction, step) {
+    if (window.innerWidth >= WINDOW_WIDTH_TABLET && element.classList.contains('training__instructors-list')) {
+      step *= 2;
+    }
+    step = (direction === 'right') ? step : -step;
+    element.scrollBy({top: 0, left: step, behavior: 'smooth'});
   };
 
-  Slider.prototype.slideScroll = function (element, control, step) {
-    element.scrollLeft += control === this.controlLeft ? -step : +step;
+  var initSlider = function (mainElement) {
+    var body = mainElement.querySelector('.slider__body');
+    var list = body.querySelector('.slider__list');
+    var items = list.querySelectorAll('.slider__item');
+    var itemWidth = parseFloat(items[1].offsetWidth);
+    var controls = mainElement.querySelector('.slider__controls');
+    var controlLeft = controls.querySelector('.slider__control_left');
+    var controlRight = controls.querySelector('.slider__control_right');
+
+    var onControlRightClick = function (evt) {
+      evt.preventDefault();
+      slideScroll(list, 'right', itemWidth);
+    };
+
+    var onControlLeftClick = function (evt) {
+      evt.preventDefault();
+      slideScroll(list, 'left', itemWidth);
+    };
+
+    controls.classList.remove('slider__controls_hidden');
+    controlRight.addEventListener('click', onControlRightClick);
+    controlLeft.addEventListener('click', onControlLeftClick);
   };
 
   var sliderElements = document.querySelectorAll('.slider');
-  var sliders = [];
+
   Array.prototype.forEach.call(sliderElements, function (element) {
-    sliders.push(new Slider(element));
+    initSlider(element);
   });
 })();

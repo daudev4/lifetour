@@ -15,7 +15,6 @@
     color: inherit;
 
     @include transition;
-
     @include link-effects($text-color_accent, 0.5);
   }
 }
@@ -72,11 +71,10 @@
   margin-top: 10px;
   margin-left: 8.3%;
 
-  @include font($font-family_primary, $font-size_l, 700, $line-height_xxl)
+  @include font($font-family_primary, $font-size_l, 700, $line-height_xxl);
 }
 
 @media (max-width: $max-width_tablet) {
-
   .page-header {
     top: 36px;
   }
@@ -100,9 +98,10 @@
 
     svg {
       display: block;
+
       @include transition;
 
-      fill: $text-color_additional
+      fill: $text-color_additional;
     }
 
     &:hover,
@@ -142,7 +141,6 @@
       font-size: 6px;
       line-height: 7px;
     }
-
   }
 
   .page-header__nav {
@@ -156,11 +154,9 @@
     font-size: $font-size_m;
     line-height: $line-height_l;
   }
-
 }
 
 @media (max-width: $max-width_mobile) {
-
   .page-header {
     top: 13px;
   }

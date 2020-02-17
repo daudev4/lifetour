@@ -46,12 +46,13 @@
   display: flex;
   flex-direction: column;
 
-  background: repeating-linear-gradient(to right,
-    rgba($white, 0.23) 0px,
+  background: repeating-linear-gradient(
+    to right,
+    rgba($white, 0.23) 0,
     rgba($white, 0.23) 1px,
     transparent 1px,
     transparent 20.5%
-  );
+    );
   background-size: calc(100% - 240px) 100%;
   background-position: center;
 }
@@ -149,7 +150,7 @@
     @include container_tablet;
 
     background: repeating-linear-gradient(to right,
-      rgba($white, 0.23) 0px,
+      rgba($white, 0.23) 0,
       rgba($white, 0.23) 1px,
       transparent 1px,
       transparent 35%
@@ -191,7 +192,6 @@
 }
 
 @media (max-width: $max-width_mobile) {
-
   .banner {
     min-height: 470px;
 

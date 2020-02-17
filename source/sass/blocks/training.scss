@@ -5,7 +5,6 @@
   color: $text-color_primary;
 
   background-color: $background-color_primary;
-
 }
 
 .training__inner {
@@ -94,7 +93,7 @@
     width: 100vw;
     height: 1px;
 
-    border: 0 solid #D9E7EA;
+    border: 0 solid #d9e7ea;
     border-top-width: 1px;
   }
 }
@@ -141,7 +140,6 @@
 }
 
 @media (max-width: $max-width_tablet) {
-
   .training__inner {
     @include container_tablet;
   }
@@ -249,7 +247,6 @@
 }
 
 @media (max-width: $max-width_mobile) {
-
   .training {
     padding-top: 50px;
   }

@@ -60,9 +60,9 @@
   margin-top: 15px;
   margin-left: auto;
 
-  // &_hidden {
-  //   display: none;
-  // }
+  &_hidden {
+    display: none;
+  }
 }
 
 .slider__control {
@@ -96,14 +96,12 @@
 }
 
 @media (max-width: $max-width_tablet) {
-
   .slider__body {
     left: -110px;
   }
 
 
   .slider__item {
-
     &:first-of-type {
       padding-left: 110px;
     }
@@ -115,13 +113,11 @@
 }
 
 @media (max-width: $max-width_mobile) {
-
   .slider__body {
     left: -20px;
   }
 
   .slider__item {
-
     &:first-of-type {
       padding-left: 20px;
     }

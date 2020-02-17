@@ -3,7 +3,7 @@
   z-index: 5;
 
   width: 100%;
-  margin-top: -20px;;
+  margin-top: -20px;
   padding-top: 20px;
   padding-bottom: 44px;
 
@@ -35,7 +35,6 @@
     color: inherit;
 
     @include transition;
-
     @include link-effects($text-color_accent, 0.5);
   }
 }
@@ -89,7 +88,7 @@
   margin-top: 10px;
   margin-left: 8.3%;
 
-  @include font($font-family_primary, $font-size_l, 700, $line-height_xxl)
+  @include font($font-family_primary, $font-size_l, 700, $line-height_xxl);
 }
 
 .page-footer__social {
@@ -133,7 +132,6 @@
 }
 
 @media (max-width: $max-width_tablet) {
-
   .page-footer {
     font-size: $font-size_s;
     line-height: 22px;

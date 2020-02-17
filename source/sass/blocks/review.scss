@@ -11,7 +11,7 @@
   color: $text-color_primary;
 
   background-color: rgba($background-color_primary, 0.09);
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.036);
+  box-shadow: 0 0 25px rgba($black, 0.036);
 }
 
 .review__author {
@@ -36,7 +36,7 @@
     display: block;
 
     font-style: normal;
-    line-height: 19px
+    line-height: 19px;
   }
 
   cite {
@@ -102,7 +102,6 @@
 }
 
 @media (max-width: $max-width_mobile) {
-
   .review {
     width: 280px;
     min-height: 535px;
@@ -119,7 +118,6 @@
   }
 
   .review__quote-mark {
-
     &_start {
       &::before {
         top: -10px;

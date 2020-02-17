@@ -90,7 +90,6 @@
     @include font($font-family_primary, $font-size_m, 400, 151.03%);
     color: $text-color_primary;
 
-    border: none;
     background-color: $background-color_primary;
     border: 1px solid rgba(2, 102, 193, 0.112);
 
@@ -135,7 +134,6 @@
 }
 
 @media (max-width: $max-width_tablet) {
-
   .feedback {
     background-image: url("../img/feedback-bg_tablet@1x.jpg");
     background-position: 47.7% 87%;
@@ -197,7 +195,6 @@
 }
 
 @media (max-width: $max-width_mobile) {
-
   .feedback {
     background-image: url("../img/feedback-bg_mobile@1x.jpg");
     background-position: 41% 86%;

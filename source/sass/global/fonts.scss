@@ -5,7 +5,8 @@
   font-display: swap;
 
   src:
-    local('Montserrat ExtraBold Italic'), local('Montserrat-ExtraBoldItalic'),
+    local("Montserrat ExtraBold Italic"),
+    local("Montserrat-ExtraBoldItalic"),
     url("../fonts/montserrat-italic_800.woff2") format("woff2"),
     url("../fonts/montserrat-italic_800.woff") format("woff");
 }
@@ -17,7 +18,8 @@
   font-display: swap;
 
   src:
-    local('Montserrat Light'), local('Montserrat-Light'),
+    local("Montserrat Light"),
+    local("Montserrat-Light"),
     url("../fonts/montserrat_300.woff2") format("woff2"),
     url("../fonts/montserrat_300.woff") format("woff");
 }
@@ -29,7 +31,8 @@
   font-display: swap;
 
   src:
-    local('Montserrat Regular'), local('Montserrat-Regular'),
+    local("Montserrat Regular"),
+    local("Montserrat-Regular"),
     url("../fonts/montserrat_400.woff2") format("woff2"),
     url("../fonts/montserrat_400.woff") format("woff");
 }
@@ -41,7 +44,8 @@
   font-display: swap;
 
   src:
-    local('Montserrat Medium'), local('Montserrat-Medium'),
+    local("Montserrat Medium"),
+    local("Montserrat-Medium"),
     url("../fonts/montserrat_500.woff2") format("woff2"),
     url("../fonts/montserrat_500.woff") format("woff");
 }
@@ -53,7 +57,8 @@
   font-display: swap;
 
   src:
-    local('Montserrat Bold'), local('Montserrat-Bold'),
+    local("Montserrat Bold"),
+    local("Montserrat-Bold"),
     url("../fonts/montserrat_700.woff2") format("woff2"),
     url("../fonts/montserrat_700.woff") format("woff");
 }
@@ -65,7 +70,8 @@
   font-display: swap;
 
   src:
-    local('Montserrat ExtraBold'), local('Montserrat-ExtraBold'),
+    local("Montserrat ExtraBold"),
+    local("Montserrat-ExtraBold"),
     url("../fonts/montserrat_800.woff2") format("woff2"),
     url("../fonts/montserrat_800.woff") format("woff");
 }
@@ -78,7 +84,8 @@
   font-display: swap;
 
   src:
-    local('Montserrat Black'), local('Montserrat-Black'),
+    local("Montserrat Black"),
+    local("Montserrat-Black"),
     url("../fonts/montserrat_900.woff2") format("woff2"),
     url("../fonts/montserrat_900.woff") format("woff");
 }

@@ -11,6 +11,7 @@
 .tours__inner {
   position: relative;
   z-index: 0;
+
   @include container_desktop;
 
   &::after {
@@ -25,13 +26,13 @@
     width: 1859px;
     height: 1240px;
 
-    background-image: url('../img/tours-bg_desktop@1x.png');
+    background-image: url("../img/tours-bg_desktop@1x.png");
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: 100% 100%;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url('../img/tours-bg_desktop@2x.png');
+      background-image: url("../img/tours-bg_desktop@2x.png");
     }
   }
 }
@@ -98,7 +99,6 @@
 }
 
 @media (max-width: $max-width_tablet) {
-
   .tours {
     padding-top: 80px;
     padding-bottom: 60px;
@@ -114,10 +114,10 @@
       width: 1440px;
       height: 960px;
 
-      background-image: url('../img/tours-bg_tablet@1x.png');
+      background-image: url("../img/tours-bg_tablet@1x.png");
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url('../img/tours-bg_tablet@2x.png');
+        background-image: url("../img/tours-bg_tablet@2x.png");
       }
     }
   }
@@ -136,7 +136,6 @@
 }
 
 @media (max-width: $max-width_mobile) {
-
   .tours {
     padding-top: 46px;
   }
@@ -151,10 +150,10 @@
       width: 1241px;
       height: 828px;
 
-      background-image: url('../img/tours-bg_mobile@1x.png');
+      background-image: url("../img/tours-bg_mobile@1x.png");
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url('../img/tours-bg_mobile@2x.png');
+        background-image: url("../img/tours-bg_mobile@2x.png");
       }
     }
   }

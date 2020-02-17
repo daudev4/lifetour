@@ -77,7 +77,7 @@
 }
 
 @mixin font-main($family: $font-family_primary, $size: $font-size_m, $weight: 400, $height: $line-height_m) {
-  @include font($family, $size, $weight, $height)
+  @include font($family, $size, $weight, $height);
 }
 
 @mixin cloud {
