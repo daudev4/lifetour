@@ -54,11 +54,7 @@
 }
 
 .tours__item {
-  padding-right: 22px;
-
-  &:last-child {
-    padding-right: 0;
-  }
+  padding-left: 20px;
 }
 
 .tours__all {
@@ -167,7 +163,6 @@
     margin-bottom: 23px;
 
     h2 {
-      max-width: 60%;
       margin-bottom: 0;
     }
 
@@ -177,7 +172,8 @@
   }
 
   .tours__item {
-    padding-right: 40px;
+    padding-right: 20px;
+    padding-left: 20px;
   }
 
   .tours__all {
