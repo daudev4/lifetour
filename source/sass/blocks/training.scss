@@ -171,6 +171,10 @@
     }
   }
 
+  .training__instructors-item {
+    scroll-snap-align: none;
+  }
+
   .training__process {
     display: flex;
     flex-direction: column;
@@ -275,6 +279,10 @@
       font-size: $font-size_m;
       line-height: $line-height_s;
     }
+  }
+
+  .training__instructors-item {
+    scroll-snap-align: center;
   }
 
   .training__process {
