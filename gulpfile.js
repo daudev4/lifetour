@@ -91,7 +91,11 @@ gulp.task('copy', function () {
   return gulp.src([
     'source/fonts/*.{woff,woff2}',
     'source/img/**',
-    'source/*.ico'
+    'source/*.ico',
+    'source/*.png',
+    'source/*.svg',
+    'source/browserconfig.xml',
+    'source/site.webmanifest'
     ], {
       base: 'source'
     })

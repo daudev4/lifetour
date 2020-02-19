@@ -9,7 +9,10 @@
       step *= 2;
     }
 
-    step = (direction === 'right') ? step : -step;
+    if (direction === 'left') {
+      step = -step;
+    }
+
     root.scrollBy({top: 0, left: step, behavior: 'smooth'});
   };
 
