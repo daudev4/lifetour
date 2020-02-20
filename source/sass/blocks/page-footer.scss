@@ -152,6 +152,7 @@
 
     svg {
       width: 60px;
+      height: 60px;
     }
 
     p {
@@ -177,14 +178,17 @@
 
   .page-footer__nav-list {
     justify-content: space-between;
-    align-items: flex-start;
     align-content: space-between;
+    align-items: flex-start;
     width: 100%;
+    min-height: 52px;
     max-height: 52px;
 
     writing-mode: vertical-lr;
 
     li {
+      margin-right: 0;
+
       white-space: nowrap;
       writing-mode: horizontal-tb;
     }

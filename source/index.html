@@ -996,7 +996,7 @@
               Ваш телефон
             </label>
             <input id="form-phone" type="tel" name="form-phone" placeholder="Телефон" autocomplete="tel"
-              pattern="[0-9]{5,10}" required>
+              pattern="^\+\d{1}\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}" data-mask="+{7} (000) 000-00-00" required>
             <button class="button" type="submit">
               Отправить
             </button>
@@ -1010,7 +1010,7 @@
     <div class="page-footer__inner">
       <div class="page-footer__content">
         <a class="page-footer__logo logo logo" href="#">
-          <svg width="62" height="62">
+          <svg width="60" height="60">
             <use xlink:href="#logo"></use>
           </svg>
           <p>

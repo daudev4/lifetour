@@ -82,6 +82,9 @@
   margin-top: 44px;
 
   input {
+    position: relative;
+    z-index: 5;
+
     width: 354px;
     margin-right: 13px;
     padding: 19px 0;
